@@ -6,7 +6,7 @@
         
         {{- if .Site.Params.footer.customText }}
             <div class="footer__custom">
-                {{- .Site.Params.footer.customText | safeHTML }}
+                {{- .Site.Params.footer.customText | replaceRE "\n" "<br>" | safeHTML }}
             </div>
         {{- end }}
     </div>

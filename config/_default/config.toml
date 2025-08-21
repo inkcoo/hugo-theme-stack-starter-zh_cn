@@ -12,10 +12,10 @@ defaultContentLanguage = "zh-cn"  # 默认内容语言
 hasCJKLanguage = true
 
 # 使用前请更改为您的 Disqus 短名称
-disqusShortname = "Inkcoo"
+disqusShortname = ""
 
 # Disqus 功能开关，请同时在config/_default/params.toml相应调整
-enableDisqus = true
+enableDisqus = false
 
 [pagination]
 pagerSize = 5  # 分页大小

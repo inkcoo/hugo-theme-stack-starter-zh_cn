@@ -1,0 +1,8 @@
+{{- /* 自定义页脚覆盖主题默认实现 */ -}}
+<footer class="footer">
+  {{- with .Site.Params.footer.customText -}}
+    <div class="footer-custom">
+      {{ . | safeHTML }}
+    </div>
+  {{- end -}}
+</footer>

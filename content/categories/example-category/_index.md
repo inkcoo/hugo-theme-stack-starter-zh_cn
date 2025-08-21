@@ -1,5 +1,5 @@
 ---
-title: 示例分类
+title: 示例分类1
 description: 此分类的描述
 image:
 

@@ -6,7 +6,7 @@ favicon = "/favicon.png"  # 网站图标
 
 [footer]
 since = 2025  # 网站创建年份
-customText = "© 2025 萤可. All rights reserved.\n使用 Hugo 构建 | 主题 Stack 由 Jimmy 设计，[Inkcoo汉化](https://inkcoo.com)，于 Cloudflare 部署"
+customText = "© 2025 萤可. All rights reserved.\n使用 Hugo 构建 | 主题 Stack 由 Jimmy 设计，<a href=\"https://inkcoo.com\">Inkcoo</a>，于 Cloudflare 部署"
 
 
 [dateFormat]
@@ -77,11 +77,11 @@ enabled = true  # 是否启用内容图像处理
 
 ## 评论
 [comments]
-enabled = true   # 是否启用评论
+enabled = false   # 是否启用评论
 provider = "disqus"  # 评论提供商
 
 # Disqus 设置
-disqusEnabled = true  # 是否启用 Disqus 评论功能，请同时在config/_default/config.toml相应调整
+disqusEnabled = false  # 是否启用 Disqus 评论功能，请同时在config/_default/config.toml相应调整
 
 [comments.disqusjs]
 shortname = ""  # Disqus 短名称
