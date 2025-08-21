@@ -6,7 +6,7 @@ description: "向往是我前进下去的动力，情感是我幸福的来源"
 
 draft: false
 tags: ["情感", "生活"] # 请根据文章内容添加合适的标签
-categories: ["余烬守残温"] # 请根据文章内容添加合适的分类
+categories: ["桑系青年的低语"] # 请根据文章内容添加合适的分类
 ---
 
 向往是我前进下去的动力，情感是我幸福的来源。
@@ -40,3 +40,7 @@ categories: ["余烬守残温"] # 请根据文章内容添加合适的分类
 {{< figure src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/8DWTSh0GEjheQhcib0H6jzSUAdXW5BIxS0eXibRPIA9icluuNVdB4aywaxgRl6RQQ9Abn3E2HhIs4Qbtcp1Vj49RQ/640?wx_fmt=jpeg" alt="Image 3" >}}
 {{< figure src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/8DWTSh0GEjheQhcib0H6jzSUAdXW5BIxSibwkJ4ibXoJNPMHXEwoeMOywY3DPtYXHujXdzpFknf5VofFSwH4lJlOg/640?wx_fmt=jpeg" alt="Image 4" >}}
 {{< figure src="https://mmbiz.qpic.cn/sz_mmbiz_png/yqdLuQuQ7QxBBb23qANV1xrYBueem4XysRZdKARicicgrVlibDDpWML6iaRCoTEM7JHpvsxNW909jwZl1vRAic2JWOg/640?wx_fmt=png" alt="Image 5" >}}
+
+> 来源：[![微信公众号](https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico)](https://mp.weixin.qq.com/s/FclkLXgmYaJ_B5oQKv5z8Q) [萤可公众号](https://mp.weixin.qq.com/s/FclkLXgmYaJ_B5oQKv5z8Q)
+
+
