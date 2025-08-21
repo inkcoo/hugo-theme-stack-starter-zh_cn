@@ -6,8 +6,7 @@ favicon = "/favicon.png"  # 网站图标
 
 [footer]
 since = 2025  # 网站创建年份
-customText = "© 2025 萤可. All rights reserved."  # 自定义页脚文本
-customText = "使用 Hugo 构建 | 主题 Stack 由 Jimmy 设计，[Inkcoo汉化](https://inkcoo.com)，于 Cloudflare 部署"
+customText = "© 2025 萤可. All rights reserved.\n使用 Hugo 构建 | 主题 Stack 由 Jimmy 设计，[Inkcoo汉化](https://inkcoo.com)，于 Cloudflare 部署"
 
 
 [dateFormat]
