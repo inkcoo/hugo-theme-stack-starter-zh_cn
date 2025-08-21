@@ -4,9 +4,9 @@ threshold = 60       # 相关性阈值
 toLower = false      # 是否转换为小写
 
 [[indices]]
-name = "tags"   # 索引名称
+name = "Tag"   # 索引名称
 weight = 100     # 权重
 
 [[indices]]
-name = "categories"  # 索引名称
+name = "分类"  # 索引名称
 weight = 200          # 权重

@@ -7,6 +7,8 @@ favicon = "/favicon.png"  # 网站图标
 [footer]
 since = 2025  # 网站创建年份
 customText = "© 2025 萤可. All rights reserved."  # 自定义页脚文本
+customText = "使用 Hugo 构建 | 主题 Stack 由 Jimmy 设计，[Inkcoo汉化](https://inkcoo.com)，于 Cloudflare 部署"
+
 
 [dateFormat]
 published = "2006年01月02日"  # 发布日期格式
@@ -14,7 +16,7 @@ lastUpdated = "2006年01月02日 15:04 CST"  # 最后更新日期格式
 
 [sidebar]
 emoji = "🍥"  # 侧边栏表情符号
-subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."  # 侧边栏副标题
+subtitle = "侧边栏个性签名， 仅为示例文本，实际使用时请替换为站点副标题。"  # 侧边栏副标题
 
 [sidebar.avatar]
 enabled = true  # 是否启用头像
@@ -78,6 +80,9 @@ enabled = true  # 是否启用内容图像处理
 [comments]
 enabled = true   # 是否启用评论
 provider = "disqus"  # 评论提供商
+
+# Disqus 设置
+disqusEnabled = true  # 是否启用 Disqus 评论功能，请同时在config/_default/config.toml相应调整
 
 [comments.disqusjs]
 shortname = ""  # Disqus 短名称

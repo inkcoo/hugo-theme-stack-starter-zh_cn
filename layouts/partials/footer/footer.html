@@ -1,0 +1,13 @@
+<footer class="footer">
+    <div class="footer__inner">
+        {{- if or .Params.enableMathNotation .Site.Params.article.math }}
+            {{- partial "math.html" . }}
+        {{- end }}
+        
+        {{- if .Site.Params.footer.customText }}
+            <div class="footer__custom">
+                {{- .Site.Params.footer.customText | safeHTML }}
+            </div>
+        {{- end }}
+    </div>
+</footer>
