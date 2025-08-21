@@ -16,3 +16,4 @@ disqusShortname = "Inkcoo"
 
 [pagination]
 pagerSize = 5  # 分页大小
+timeZone = "Asia/Shanghai"
