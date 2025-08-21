@@ -6,8 +6,7 @@ favicon = "/favicon.png"  # 网站图标
 
 [footer]
 since = 2025  # 网站创建年份
-customText = "© 2025 萤可. All rights reserved.\n使用 Hugo 构建 | 主题 Stack 由 Jimmy 设计，<a href=\"https://inkcoo.com\">Inkcoo</a>，于 Cloudflare 部署"
-
+customText = "© 2025 萤可. All rights reserved.\n使用 Hugo 构建 | 主题 <a href=\"https://stack.jimmycai.com\" target=\"_blank\">Stack 由 Jimmy 设计</a>｜<a href=\"https://inkcoo.com\" target=\"_blank\">Inkcoo</a>汉化<br>部署于Cloudflare"
 
 [dateFormat]
 published = "2006年01月02日"  # 发布日期格式
