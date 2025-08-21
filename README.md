@@ -1,69 +1,162 @@
-<img align="right" width="150" alt="logo" src="https://user-images.githubusercontent.com/5889006/190859553-5b229b4f-c476-4cbd-928f-890f5265ca4c.png">
+# Hugo Stack 汉化主题 Cloudflare Pages 部署完整一键部署指南
+本项目基于 CaiJimmy 开源的 `hugo-theme-stack-starter` 仓库，于 2025 年 8 月 21 日 20:30 进行克隆，并在此基础上完成汉化与优化，旨在为中文用户提供免费的cloudflare page部署的 Hugo Stack 主题网站。
 
-# Hugo Theme Stack Starter Template
+## 目录
+1. [准备工作](#准备工作)
+2. [项目设置](#项目设置)
+3. [Cloudflare Pages 部署](#cloudflare-pages-部署)
+4. [目录结构详解](#目录结构详解)
+5. [创建新文章](#创建新文章)
+6. [常见问题](#常见问题)
 
-This is a quick start template for [Hugo theme Stack](https://github.com/CaiJimmy/hugo-theme-stack). It uses [Hugo modules](https://gohugo.io/hugo-modules/) feature to load the theme.
+## 准备工作
 
-It comes with a basic theme structure and configuration. GitHub action has been set up to deploy the theme to a public GitHub page automatically. Also, there's a cron job to update the theme automatically everyday.
+### 必需条件
+- GitHub 账号
+- Cloudflare 账号
+- 域名（可选）
 
-## Get started
+### 第一步：创建项目
+1. 访问 [hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter)
+2. 点击 "Use this template" > "Create a new repository"
+3. 仓库名称：`你的博客名称`
+4. 选择 "Public"
+5. 点击 "Create repository from template"
 
-1. Click *Use this template*, and create your repository as `<username>.github.io` on GitHub.
-![Step 1](https://user-images.githubusercontent.com/5889006/156916624-20b2a784-f3a9-4718-aa5f-ce2a436b241f.png)
+## 项目设置
 
-2. Once the repository is created, create a GitHub codespace associated with it.
-![Create codespace](https://user-images.githubusercontent.com/5889006/156916672-43b7b6e9-4ffb-4704-b4ba-d5ca40ffcae7.png)
+### 配置文件说明
+所有配置文件位于 `config/_default/` 目录下：
 
-3. And voila! You're ready to go. The codespace has been configured with the latest version of Hugo extended, just run `hugo server` in the terminal and see your new site in action.
+1. `config.toml` 基础配置
+2. `params.toml` 主题参数
+3. `menu.toml` 导航菜单
 
-4. Check `config` folder for the configuration files. You can edit them to suit your needs. Make sure to update the `baseurl` property in `config/_default/config.toml` to your site's URL.
+## Cloudflare Pages 部署
 
-5. Open Settings -> Pages. Change the build branch from `master` to `gh-pages`.
-![Build](https://github.com/namanh11611/hugo-theme-stack-starter/assets/16586200/12c763cd-bead-4923-b610-8788f388fcb5)
+### 步骤一：连接仓库
+1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com)
+2. 选择 "Pages"
+3. 点击 "Create a project"
+4. 选择 "Connect to Git"
+5. 选择你的 GitHub 仓库
 
-6. Once you're done editing the site, just commit it and push it. GitHub action will deploy the site automatically to GitHub page asociated with the repository.
-![GitHub action](https://user-images.githubusercontent.com/5889006/156916881-90b8bb9b-1925-4e60-9d7a-8026cda729bf.png)
+### 步骤二：配置构建设置
 
----
+在 Cloudflare Pages 的构建设置中填写：
 
-In case you don't want to use GitHub codespace, you can also run this template in your local machine. **You need to install Git, Go and Hugo extended locally.**
+```plaintext
+项目名称：你的项目名称
+生产分支：main
+框架预设：None（不要选择 Hugo 预设）
 
-## Update theme manually
+构建命令：hugo --gc --minify
+构建输出目录：public
 
-Run:
+环境变量：
+HUGO_VERSION=0.148.2
+HUGO_EXTENDED=true
+```
+
+重要提示：
+- 不要使用 Hugo 框架预设，手动配置更可靠
+- `HUGO_VERSION` 建议使用最新的稳定版本
+- 确保 `baseurl` 配置正确
+
+### 步骤三：高级设置(部署时添加了环境变量即可忽略)
+
+在 "Environment variables" 下添加以下配置：
+
+```plaintext
+环境变量（All deployments）:
+HUGO_VERSION: 0.148.2
+HUGO_EXTENDED: true
+```
+
+## 目录结构详解
+
+```
+project-root/
+├── archetypes/                 # 文章模板
+│   └── default.md             # 默认模板
+├── assets/                    # 资源文件
+│   ├── icons/                # 图标文件
+│   ├── img/                  # 图片文件
+│   └── scss/                 # 自定义样式
+├── config/                    # 配置文件夹
+│   └── _default/             # 默认配置
+│       ├── config.toml       # 主配置
+│       ├── params.toml       # 参数配置
+│       └── menu.toml         # 菜单配置
+├── content/                   # 内容目录
+│   ├── posts/                # 博客文章
+│   ├── pages/                # 独立页面
+│   └── categories/           # 分类页面
+├── layouts/                   # 自定义布局
+├── static/                    # 静态文件
+│   ├── favicon.ico           # 网站图标
+│   └── images/               # 图片资源
+└── themes/                    # 主题目录
+    └── hugo-theme-stack/     # Stack 主题
+```
+
+### 目录用途说明
+
+1. `archetypes/`：
+   - 新文章的模板
+   - 使用 `hugo new posts/文章名.md` 时会用到
+
+2. `assets/`：
+   - 需要处理的资源文件
+   - 支持 SCSS 编译
+   - 图片可以被优化
+
+3. `content/`：
+   - 所有内容文件
+   - `posts/` 存放博客文章
+   - `pages/` 存放独立页面
+
+4. `static/`：
+   - 静态资源
+   - 直接复制到最终网站
+   - 适合放置图片、PDF等
+
+## 创建新文章
+
+使用以下命令创建新文章：
 
 ```bash
-hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v3
-hugo mod tidy
+hugo new posts/my-first-post.md
 ```
 
-> This starter template has been configured with `v3` version of theme. Due to the limitation of Go module, once the `v4` or up version of theme is released, you need to update the theme manually. (Modifying `config/module.toml` file)
+文章前置参数示例：
 
-## Deploy to another static page hostings
-
-If you want to build this site using another static page hosting, you need to make sure they have Go installed in the machine. 
-
-<details>
-  <summary>Vercel</summary>
-  
-You need to overwrite build command to install manually Go:
-
-```
-amazon-linux-extras install golang1.11 && hugo --gc --minify
-```
-
-![](https://user-images.githubusercontent.com/5889006/156917172-01e4d418-3469-4ffb-97e4-a905d28b8424.png)
-
-If you are using Node.js 20, you need to overwrite the install command to install manually Go:
-
-```
-dnf install -y golang
+```yaml
+---
+title: "我的第一篇文章"
+description: "文章描述"
+date: 2025-08-21
+image: cover.jpg
+categories:
+    - 技术
+    - 随笔
+tags:
+    - Hugo
+    - 博客
+---
 ```
 
-![image](https://github.com/zhi-yi-huang/hugo-theme-stack-starter/assets/83860323/777c1109-dfc8-4893-9db7-1305ec027cf5)
+## 常见问题
 
+### 1. 部署失败
+检查：
+- 环境变量 `HUGO_VERSION` 是否正确设置
+- 构建命令和输出目录是否正确
+- 询问AI大模型
 
-Make sure also to specify Hugo version in the environment variable `HUGO_VERSION` (Use the latest version of Hugo extended):
+### 2. 图片显示问题
+- 文章内图片放在 `static/` 目录
+- 或使用 `assets/` 目录并用 Hugo 管道处理
 
-![Environment variable](https://user-images.githubusercontent.com/5889006/156917212-afb7c70d-ab85-480f-8288-b15781a462c0.png)
-</details>
+## 更新主题
+建议持续关注原作者主题仓库 [hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack) 的更新，自行对应汉化更新。
