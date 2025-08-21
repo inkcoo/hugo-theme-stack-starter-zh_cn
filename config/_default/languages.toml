@@ -1,0 +1,6 @@
+# 将此文件重命名为 languages.toml 以启用多语言支持
+[zh-cn]
+languageName = "zh-cn"  # 语言名称
+languagedirection = "ltr"  # 语言方向，ltr表示从左到右，rtl表示从右到左
+title = "Example Site"     # 网站标题
+weight = 1                  # 语言权重，用于排序

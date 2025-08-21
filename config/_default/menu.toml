@@ -1,24 +1,24 @@
-# Configure main menu and social menu
+# 配置主菜单和社交菜单
 #[[main]]
-#identifier = "home"
-#name = "Home"
-#url = "/"
+#identifier = "home"  # 菜单项标识符
+#name = "Home"        # 菜单项名称
+#url = "/"            # 菜单项链接
 #[main.params]
-#icon = "home"
-#newtab = true
+#icon = "home"        # 菜单项图标
+#newtab = true         # 是否在新标签页打开
 
 [[social]]
-identifier = "github"
-name = "GitHub"
-url = "https://github.com/CaiJimmy/hugo-theme-stack"
+identifier = "github"  # 社交菜单项标识符
+name = "GitHub"        # 社交菜单项名称
+url = "https://github.com/inkcoo/hugo-theme-stack-zh-cn"  # 社交菜单项链接
 
 [social.params]
-icon = "brand-github"
+icon = "brand-github"  # 社交菜单项图标
 
 [[social]]
-identifier = "twitter"
-name = "Twitter"
-url = "https://twitter.com"
+identifier = "twitter"  # 社交菜单项标识符
+name = "Twitter"        # 社交菜单项名称
+url = "https://twitter.com"  # 社交菜单项链接
 
 [social.params]
-icon = "brand-twitter"
+icon = "brand-twitter"  # 社交菜单项图标

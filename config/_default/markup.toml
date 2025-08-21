@@ -1,26 +1,26 @@
-# Markdown renderer configuration
+# Markdown 渲染器配置
 [goldmark.renderer]
-unsafe = true
+unsafe = true  # 是否允许不安全的 HTML
 
 [goldmark.extensions.passthrough]
-enable = true
+enable = true  # 是否启用 passthrough 扩展
 
-# LaTeX math support
+# LaTeX 数学支持
 # https://gohugo.io/content-management/mathematics/
 [goldmark.extensions.passthrough.delimiters]
-block = [['\[', '\]'], ['$$', '$$']]
-inline = [['\(', '\)']]
+block = [['\[', '\]'], ['$$', '$$']]  # 块级数学公式分隔符
+inline = [['\(', '\)']]  # 行内数学公式分隔符
 
 [tableOfContents]
-endLevel = 4
-ordered = true
-startLevel = 2
+endLevel = 4     # 目录结束级别
+ordered = true   # 是否使用有序列表
+startLevel = 2   # 目录开始级别
 
 [highlight]
-noClasses = false
-codeFences = true
-guessSyntax = true
-lineNoStart = 1
-lineNos = true
-lineNumbersInTable = true
-tabWidth = 4
+noClasses = false          # 是否不使用 CSS 类
+codeFences = true         # 是否启用代码围栏
+guessSyntax = true        # 是否自动猜测语法
+lineNoStart = 1           # 行号起始值
+lineNos = true            # 是否显示行号
+lineNumbersInTable = true # 行号是否在表中
+tabWidth = 4              # Tab 宽度

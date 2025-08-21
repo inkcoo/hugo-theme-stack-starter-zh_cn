@@ -1,12 +1,12 @@
-# Related contents configuration
-includeNewer = true
-threshold = 60
-toLower = false
+# 相关内容配置
+includeNewer = true  # 是否包含较新的内容
+threshold = 60       # 相关性阈值
+toLower = false      # 是否转换为小写
 
 [[indices]]
-name = "tags"
-weight = 100
+name = "tags"   # 索引名称
+weight = 100     # 权重
 
 [[indices]]
-name = "categories"
-weight = 200
+name = "categories"  # 索引名称
+weight = 200          # 权重
