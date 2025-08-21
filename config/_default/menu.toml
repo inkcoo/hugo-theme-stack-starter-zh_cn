@@ -16,9 +16,9 @@ url = "https://github.com/inkcoo/hugo-theme-stack-zh-cn"  # 社交菜单项链�
 icon = "brand-github"  # 社交菜单项图标
 
 [[social]]
-identifier = "twitter"  # 社交菜单项标识符
-name = "Twitter"        # 社交菜单项名称
-url = "https://twitter.com"  # 社交菜单项链接
+identifier = "email"  # 社交菜单项标识符
+name = "Email"        # 社交菜单项名称
+url = "mailto:example@example.com"  # 社交菜单项链接
 
 [social.params]
-icon = "brand-twitter"  # 社交菜单项图标
+icon = "mail"  # 社交菜单项图标

@@ -57,6 +57,7 @@ type = "toc"  # 目录小部件
 
 [opengraph.twitter]
 site = ""  # Twitter 站点
+# 注意：Twitter链接已更改为邮箱链接，此处保持空值
 card = "summary_large_image"  # Twitter 卡片类型
 
 [defaultImage.opengraph]
